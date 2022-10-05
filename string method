@@ -1,0 +1,27 @@
+t=int(input())
+for i in range(t):
+    n=int(input())
+    s=input()
+    l=[]
+    i=1
+    while n>0:
+        if i%2!=0:
+            ch=s[0:1]
+            if ch=="0":
+                l.insert(0,ch)
+            else:
+                l.append(ch)
+            s=s[1:]
+        else:
+            ch=s[n-1:n]
+            if ch=="1":
+                l.insert(0,ch)
+            else:
+                l.append(ch)
+            s=s[:n-1]
+        
+        i+=1
+        n-=1
+        
+    new="".join(l)
+    print(new)
